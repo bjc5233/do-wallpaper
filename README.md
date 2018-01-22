@@ -52,8 +52,8 @@
 * outfile - 保存图片地址,为空时,保存到temp目录
 
 ### 预览
-<div align=center><img src="https://github.com/bjc5233/wallpaper-blur/raw/master/resources/demo.png"/></div>
-<div align=center><img src="https://github.com/bjc5233/wallpaper-blur/raw/master/resources/demo2.png"/></div>
+<div align=center><img src="https://github.com/bjc5233/do-wallpape/raw/master/wallpaperBlur/resources/demo.png"/></div>
+<div align=center><img src="https://github.com/bjc5233/do-wallpape/raw/master/wallpaperBlur/resources/demo2.png"/></div>
 
 
 
@@ -72,7 +72,7 @@
 * outfile - 保存图片地址,为空时,保存到temp目录
 
 ### 预览
-<div align=center><img src="https://github.com/bjc5233/wallpaper-grid/raw/master/resources/demo.png"/></div>
+<div align=center><img src="https://github.com/bjc5233/do-wallpape/raw/master/wallpaperGrid/resources/demo.png"/></div>
 
 
 
@@ -97,8 +97,8 @@
 
 
 ### 预览
-<div align=center><img src="https://github.com/bjc5233/wallpaper-HO/raw/master/resources/demo.png"/></div>
-<div align=center><img src="https://github.com/bjc5233/wallpaper-HO/raw/master/resources/demo2.png"/></div>
+<div align=center><img src="https://github.com/bjc5233/do-wallpape/raw/master/wallpaperHO/resources/demo.png"/></div>
+<div align=center><img src="https://github.com/bjc5233/do-wallpape/raw/master/wallpaperHO/resources/demo2.png"/></div>
 
 
 
@@ -125,10 +125,10 @@
 * wallpaperTiltshift.bat -m c "D:\src.jpg" "D:\circle.jpg"
 
 
-<div align=center><img src="https://github.com/bjc5233/wallpaper-tilt-shift/raw/master/resources/src.jpg"/></div>
-<div align=center><img src="https://github.com/bjc5233/wallpaper-tilt-shift/raw/master/resources/horizontal.jpg"/></div>
-<div align=center><img src="https://github.com/bjc5233/wallpaper-tilt-shift/raw/master/resources/vertical.jpg"/></div>
-<div align=center><img src="https://github.com/bjc5233/wallpaper-tilt-shift/raw/master/resources/circle.jpg"/></div>
+<div align=center><img src="https://github.com/bjc5233/do-wallpape/raw/master/wallpaperTiltshift/resources/src.jpg"/></div>
+<div align=center><img src="https://github.com/bjc5233/do-wallpape/raw/master/wallpaperTiltshift/resources/horizontal.jpg"/></div>
+<div align=center><img src="https://github.com/bjc5233/do-wallpape/raw/master/wallpaperTiltshift/resources/vertical.jpg"/></div>
+<div align=center><img src="https://github.com/bjc5233/do-wallpape/raw/master/wallpaperTiltshift/resources/circle.jpg"/></div>
 
 
 ------------
