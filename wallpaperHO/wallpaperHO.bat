@@ -1,19 +1,20 @@
-@echo off& call load.bat _getRandomNum _getDeskWallpaperPath& call loadF.bat _params _errorMsg& call loadE.bat bc WallpaperChanger imagemagick-mogrify imagemagick-convert imagemagick-identify& setlocal enabledelayedexpansion
-::说明
-::  通过ImageMagick工具合并图片
-::参考
-::  https://www.imagemagick.org/script/convert.php
-::  http://www.imagemagick.org/Usage/thumbnails/
-::参数
-::  [-m mode] [-s coverScalePercent] [-x coverPosXPercent] [-y coverPosYPercent] [-b blurNum] [-p processStep] infile outfile
-::      mode - cover图在back图中的样式 1[rect] 2[rect-shadow] 3[circle] 4[circle-shadow] default=random
-::      coverScalePercent - cover图缩放值
-::      coverPosXPercent - cover图在back图X轴所处位置百分比
-::      coverPosYPercent - cover图在back图Y轴所处位置百分比
-::      blur - back图模糊程度,默认值22,值越大花费的时间越长
-::      processStep - 处理步骤, 0[process] 1[setDeskWallpaper] 2[setLockWallpaper], default=2
-::      infile - 传入图片地址,为空\#时,使用当前桌面壁纸
-::      outfile - 保存图片地址,为空时,保存到temp目录
+@echo off& call load.bat _getRandomNum _getDeskWallpaperPath& call loadF.bat _params _errorMsg _help& call loadE.bat bc WallpaperChanger imagemagick-mogrify imagemagick-convert imagemagick-identify& setlocal enabledelayedexpansion
+:::说明
+:::  通过ImageMagick工具合并图片
+:::参考
+:::  https://www.imagemagick.org/script/convert.php
+:::  http://www.imagemagick.org/Usage/thumbnails/
+:::参数
+:::  [-h help] [-m mode] [-s coverScalePercent] [-x coverPosXPercent] [-y coverPosYPercent] [-b blurNum] [-p processStep] infile outfile
+:::      help - 打印注释信息
+:::      mode - cover图在back图中的样式 1[rect] 2[rect-shadow] 3[circle] 4[circle-shadow] default=random
+:::      coverScalePercent - cover图缩放值
+:::      coverPosXPercent - cover图在back图X轴所处位置百分比
+:::      coverPosYPercent - cover图在back图Y轴所处位置百分比
+:::      blur - back图模糊程度,默认值22,值越大花费的时间越长
+:::      processStep - 处理步骤, 0[process] 1[setDeskWallpaper] 2[setLockWallpaper], default=2
+:::      infile - 传入图片地址,为空\#时,使用当前桌面壁纸
+:::      outfile - 保存图片地址,为空时,保存到temp目录
 
 ::========================= set default param =========================
 set blurNum=27
@@ -25,6 +26,10 @@ call %_params% %*
 
 
 ::========================= set user param =========================
+if defined _param-h (
+	call %_help% "%~f0"
+	goto :EOF
+)
 if defined _param-m (
 	set mode=%_param-m%& set flag=0
 	if !mode! GEQ 1 if !mode! LEQ 4 set flag=1

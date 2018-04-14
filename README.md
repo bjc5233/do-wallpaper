@@ -85,7 +85,8 @@
 > 将图片处理为氢氧风格
 
 ### 参数
-* [-m mode] [-s coverScalePercent] [-x coverPosXPercent] [-y coverPosYPercent] [-b blurNum] [-p processStep] infile outfile
+* [-h help] [-m mode] [-s coverScalePercent] [-x coverPosXPercent] [-y coverPosYPercent] [-b blurNum] [-p processStep] infile outfile
+* help - 打印注释信息
 * mode - cover图在back图中的样式 1[rect] 2[rect-shadow] 3[circle] 4[circle-shadow] default=random
 * coverScalePercent - cover图缩放值
 * coverPosXPercent - cover图在back图X轴所处位置百分比
