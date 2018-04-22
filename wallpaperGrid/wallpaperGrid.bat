@@ -1,26 +1,28 @@
-@echo off& call load.bat _getRandomNum _getDeskWallpaperPath& call loadF.bat _params _errorMsg& call loadE.bat bc WallpaperChanger imagemagick-convert imagemagick-identify imagemagick-composite& setlocal enabledelayedexpansion
-::说明
-::  通过ImageMagick工具制作九宫格图片
-::参考
-::  https://www.imagemagick.org/script/convert.php
-::参数
-::  [-p padding] [-c color] [-p processStep] infile outfile
-::      padding - 宫格之间间隔 default=10
-::      color - 宫格之间间隔颜色 default=255,255,255,0.4
-::      processStep - 处理步骤, 0[process] 1[setDeskWallpaper] 2[setLockWallpaper], default=2
-::      infile - 传入图片地址,为空\#时,使用当前桌面壁纸
-::      outfile - 保存图片地址,为空时,保存到temp目录
-
+@echo off& call load.bat _getRandomNum _getDeskWallpaperPath& call loadF.bat _params _errorMsg _help& call loadE.bat bc WallpaperChanger imagemagick-convert imagemagick-identify imagemagick-composite& setlocal enabledelayedexpansion
+:::说明
+:::  通过ImageMagick工具制作九宫格图片
+:::参考
+:::  https://www.imagemagick.org/script/convert.php
+:::参数
+:::  [-p padding] [-c color] infile outfile
+:::      padding - 宫格之间间隔 default=10
+:::      color - 宫格之间间隔颜色 default=255,255,255,0.4
+:::      infile - 传入图片地址,为空\#时,使用当前桌面壁纸
+:::      outfile - 保存图片地址,为空时,保存到temp目录
+:::  [-h help]
+:::      help - 打印注释信息
 
 ::========================= set default param =========================
 set padding=10
 set color=255,255,255,0.4
-set lockScreenFlag=1
+::处理步骤, 0[process] 1[setDeskWallpaper] 2[setLockWallpaper], default=2
 set processStep=2
 call %_params% %*
 
 
 ::========================= set user param =========================
+if defined _param-h (call %_help% "%~f0"& goto :EOF)
+if defined _param-help (call %_help% "%~f0"& goto :EOF)
 if defined _param-p (set padding=%_param-p%)
 if defined _param-c (set color=%_param-c%)
 if defined _param-0 (

@@ -1,21 +1,24 @@
-@echo off& call load.bat _getDeskWallpaperPath& call loadF.bat _params _errorMsg& call loadE.bat WallpaperChanger imagemagick-mogrify& setlocal enabledelayedexpansion
-::说明
-::  通过ImageMagick工具模糊壁纸，设置为桌面壁纸、锁屏壁纸
-::参考
-::  https://www.imagemagick.org/script/command-line-options.php#blur
-::参数
-::  [-b blurNum] [-p processStep] infile outfile
-::      blurNum - 模糊程度,默认值22,值越大花费的时间越长
-::      processStep - 处理步骤, 0[process] 1[setDeskWallpaper] 2[setLockWallpaper], default=2
-::      infile - 传入图片地址,为空\#时,使用当前桌面壁纸
-::      outfile - 保存图片地址,为空时,保存到temp目录
-
+@echo off& call load.bat _getDeskWallpaperPath& call loadF.bat _params _errorMsg _help& call loadE.bat WallpaperChanger imagemagick-mogrify& setlocal enabledelayedexpansion
+:::说明
+:::  通过ImageMagick工具模糊壁纸，设置为桌面壁纸、锁屏壁纸
+:::参考
+:::  https://www.imagemagick.org/script/command-line-options.php#blur
+:::参数
+:::  [-b blurNum] [-p processStep] infile outfile
+:::      blurNum - 模糊程度,默认值22,值越大花费的时间越长
+:::      processStep - 处理步骤, 0[process] 1[setDeskWallpaper] 2[setLockWallpaper], default=2
+:::      infile - 传入图片地址,为空\#时,使用当前桌面壁纸
+:::      outfile - 保存图片地址,为空时,保存到temp目录
+:::  [-h help]
+:::      help - 打印注释信息
 ::========================= set default param =========================
 set blurNum=22
 set processStep=2
 call %_params% %*
 
 ::========================= set user param =========================
+if defined _param-h (call %_help% "%~f0"& goto :EOF)
+if defined _param-help (call %_help% "%~f0"& goto :EOF)
 if defined _param-b (set blurNum=%_param-b%)
 if defined _param-0 (
     set wallpaperPath=%_param-0%

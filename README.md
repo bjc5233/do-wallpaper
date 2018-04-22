@@ -50,6 +50,8 @@
 * processStep - 处理步骤, 0[process] 1[setDeskWallpaper] 2[setLockWallpaper], default=2
 * infile - 传入图片地址,为空\#时,使用当前桌面壁纸
 * outfile - 保存图片地址,为空时,保存到temp目录
+* [-h help]
+* help - 打印注释信息
 
 ### 预览
 <div align=center><img src="https://github.com/bjc5233/do-wallpaper/raw/master/wallpaperBlur/resources/demo.png"/></div>
@@ -70,6 +72,8 @@
 * processStep - 处理步骤, 0[process] 1[setDeskWallpaper] 2[setLockWallpaper], default=2
 * infile - 传入图片地址,为空\#时,使用当前桌面壁纸
 * outfile - 保存图片地址,为空时,保存到temp目录
+* [-h help]
+* help - 打印注释信息
 
 ### 预览
 <div align=center><img src="https://github.com/bjc5233/do-wallpaper/raw/master/wallpaperGrid/resources/demo.png"/></div>
@@ -85,8 +89,7 @@
 > 将图片处理为氢氧风格
 
 ### 参数
-* [-h help] [-m mode] [-s coverScalePercent] [-x coverPosXPercent] [-y coverPosYPercent] [-b blurNum] [-p processStep] infile outfile
-* help - 打印注释信息
+* [-m mode] [-s coverScalePercent] [-x coverPosXPercent] [-y coverPosYPercent] [-b blurNum] [-p processStep] infile outfile
 * mode - cover图在back图中的样式 1[rect] 2[rect-shadow] 3[circle] 4[circle-shadow] default=random
 * coverScalePercent - cover图缩放值
 * coverPosXPercent - cover图在back图X轴所处位置百分比
@@ -95,7 +98,8 @@
 * processStep - 处理步骤, 0[process] 1[setDeskWallpaper] 2[setLockWallpaper], default=2
 * infile - 传入图片地址,为空\#时,使用当前桌面壁纸
 * outfile - 保存图片地址,为空时,保存到temp目录
-
+* [-h help]
+* help - 打印注释信息
 
 ### 预览
 <div align=center><img src="https://github.com/bjc5233/do-wallpaper/raw/master/wallpaperHO/resources/demo.png"/></div>
@@ -117,7 +121,8 @@
 * processStep - 处理步骤, 0[process] 1[setDeskWallpaper] 2[setLockWallpaper], default=2
 * infile - 传入图片地址,为空时,使用当前桌面壁纸
 * outfile - 保存图片地址,为空时,保存到temp目录
-
+* [-h help]
+* help - 打印注释信息
 
 ### 预览
 * 四张图片分别是: src.jpg horizontal.jpg vertical.jpg circle.jpg
