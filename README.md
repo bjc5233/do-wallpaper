@@ -11,6 +11,7 @@
 * [wallpaperHO](#wallpaperHO)
 * [wallpaperTiltshift](#wallpaperTiltshift)
 * [wallpaperLockScreen](#wallpaperLockScreen)    
+* [wallpaperDirs](#wallpaperDirs)    
     
     
 ------------
@@ -143,4 +144,14 @@
 更换锁屏壁纸
 * 调用方式A 无参数 - 将当前桌面壁纸设置为锁屏壁纸
 * 调用方式B 带一个参数 - 将指定图片设置为锁屏壁纸
+------------
+
+
+## wallpaperDirs
+### 说明
+从指定文件夹中随机选择一张图片作壁纸
+### 调用参数
+* %1 - 处理步骤[0-setWallpaper 1-setLockWallpaper(默认值)]
+### 注意
+* imgDirs中指定的路径, 查询图片时只查询当前层级, 不会递归处理
 ------------
